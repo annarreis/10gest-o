@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dez Gestão | Sindicatura Profissional de Elite</title>
+    
+    <!-- Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        musgo: {
+                            light: '#F9FAF7',
+                            DEFAULT: '#4A5D23',
+                            dark: '#1F2613',
+                            hover: '#3A4A1B'
+                        },
+                        accent: '#8A9178'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .bg-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .gallery-columns {
+            column-count: 2;
+            column-gap: 1rem;
+        }
+        @media (min-width: 768px) { .gallery-columns { column-count: 3; } }
+        @media (min-width: 1024px) { .gallery-columns { column-count: 5; } }
+        
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-musgo-light text-slate-800 font-sans selection:bg-musgo/20">
+
+    <!-- --- HEADER --- -->
+    <header id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 py-8">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#">
+                <img src="https://dezgestao.com.br/wp-content/uploads/2024/07/Logo-Dez-Gestao.png" alt="Logo Dez Gestão" class="h-10 md:h-12 w-auto">
+            </a>
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#solucoes" class="text-[11px] font-[800] uppercase tracking-[0.2em] text-musgo hover:text-musgo-dark transition-colors">Soluções</a>
+                <a href="#quem-e" class="text-[11px] font-[800] uppercase tracking-[0.2em] text-musgo hover:text-musgo-dark transition-colors">Sobre</a>
+                <a href="#realizacoes" class="text-[11px] font-[800] uppercase tracking-[0.2em] text-musgo hover:text-musgo-dark transition-colors">Realizações</a>
+                <a href="#ativos" class="text-[11px] font-[800] uppercase tracking-[0.2em] text-musgo hover:text-musgo-dark transition-colors">Portfólio</a>
+                <a href="https://wa.me/5511982020460" class="bg-musgo text-white px-8 py-3.5 rounded-full text-xs font-[800] uppercase tracking-widest shadow-xl shadow-musgo/20 hover:bg-musgo-hover transition-all">
+                    Falar com Especialista
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- --- HERO SECTION --- -->
+    <section class="relative pt-40 pb-20 lg:pt-56 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-musgo/10 text-musgo text-[10px] font-[800] uppercase tracking-[0.25em] rounded-md mb-10 border border-musgo/20">
+                        <i data-lucide="shield-check" class="w-4 h-4"></i> Sindicatura Profissional em São Paulo
+                    </div>
+                    
+                    <h1 class="text-5xl lg:text-[5rem] font-[800] text-musgo-dark leading-[1] mb-10 tracking-[-0.04em]">
+                        Gestão de elite para o seu <span class="text-musgo italic font-[400]">patrimônio.</span>
+                    </h1>
+                    
+                    <p class="text-xl text-slate-600 mb-12 leading-relaxed max-w-xl font-medium">
+                        O Método Dez transforma a administração do seu prédio em uma <span class="text-musgo-dark font-[800]">operação de alta performance, transparente e eficiente</span>, cuidando de cada detalhe para 1.311 famílias paulistanas.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center gap-10 mb-16">
+                        <div class="flex flex-col">
+                            <span class="text-5xl font-[800] text-musgo tracking-tighter">1.311</span>
+                            <span class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-accent mt-1">Famílias Cuidadas</span>
+                        </div>
+                        <div class="w-[1px] h-12 bg-slate-200 hidden sm:block"></div>
+                        <div class="flex flex-col">
+                            <span class="text-5xl font-[800] text-musgo tracking-tighter">-30%</span>
+                            <span class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-accent mt-1">Custos Reduzidos</span>
+                        </div>
+                    </div>
+
+                    <!-- FORMULÁRIO -->
+                    <div class="bg-white p-3 rounded-[3rem] shadow-[0_32px_64px_-12px_rgba(74,93,35,0.15)] border border-slate-100 max-w-lg">
+                        <form action="#" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="md:col-span-2 text-center mb-4">
+                                <h3 class="text-musgo-dark font-[800] text-[11px] uppercase tracking-[0.35em]">Receba um Diagnóstico Estratégico</h3>
+                            </div>
+                            <input type="text" placeholder="Seu Nome" class="w-full p-4 bg-musgo-light border-none rounded-2xl focus:ring-2 focus:ring-musgo outline-none transition-all font-bold text-sm">
+                            <input type="tel" placeholder="WhatsApp" class="w-full p-4 bg-musgo-light border-none rounded-2xl focus:ring-2 focus:ring-musgo outline-none transition-all font-bold text-sm">
+                            <input type="text" placeholder="Nome do Condomínio" class="md:col-span-2 w-full p-4 bg-musgo-light border-none rounded-2xl focus:ring-2 focus:ring-musgo outline-none transition-all font-bold text-sm">
+                            <button type="submit" class="md:col-span-2 bg-musgo hover:bg-musgo-hover text-white font-[800] py-5 rounded-2xl text-[11px] uppercase tracking-[0.25em] transition-all transform active:scale-95 flex items-center justify-center gap-3">
+                                Descobrir Potencial de Economia <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="relative hidden lg:flex justify-end" data-aos="fade-left" data-aos-duration="1200">
+                    <div class="relative">
+                        <div class="absolute -inset-10 bg-musgo/5 rounded-full blur-[100px] animate-pulse"></div>
+                        <img src="https://dezgestao.com.br/wp-content/uploads/2024/07/elieser-sales.png" alt="Elieser Sales" class="relative z-10 w-full max-w-[500px] drop-shadow-2xl">
+                        <div class="absolute -bottom-8 -left-20 z-20 animate-float">
+                           <div class="bg-white p-6 rounded-[2rem] shadow-2xl border border-slate-50 rotate-[-3deg]">
+                             <img src="https://dezgestao.com.br/wp-content/uploads/2024/07/assinatura-elieser-sales-dez-gestao2.png" class="w-40" alt="Assinatura">
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- DIFERENCIAIS (SOLUÇÕES PERSONALIZADAS) --- -->
+    <section id="solucoes" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-24" data-aos="fade-up">
+                <h2 class="text-4xl lg:text-6xl font-[800] text-musgo-dark mb-8 leading-tight tracking-tight italic">
+                    Oferecemos soluções personalizadas para cada condomínio.
+                </h2>
+                <div class="w-24 h-1.5 bg-musgo/20 mx-auto mb-10 rounded-full"></div>
+                <p class="text-xl text-slate-500 font-medium">
+                    Desde gestão financeira até mediação de conflitos, simplificamos a vida dos moradores e garantimos a valorização do patrimônio.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1. Análise de Contratos -->
+                <div class="group p-10 bg-musgo-light rounded-[3rem] border border-transparent hover:border-musgo/20 hover:bg-white hover:shadow-2xl transition-all duration-500" data-aos="fade-up">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 group-hover:bg-musgo group-hover:text-white transition-all text-musgo">
+                        <i data-lucide="file-text" class="w-7 h-7 text-musgo"></i>
+                    </div>
+                    <h4 class="text-lg font-[800] text-musgo-dark mb-4 uppercase tracking-tighter italic">Análise de Contratos</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed font-semibold">Identificação de oportunidades de redução de custos e otimização imediata dos serviços prestados.</p>
+                </div>
+
+                <!-- 2. Transparência -->
+                <div class="group p-10 bg-musgo-light rounded-[3rem] border border-transparent hover:border-musgo/20 hover:bg-white hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 group-hover:bg-musgo group-hover:text-white transition-all text-musgo">
+                        <i data-lucide="layout-dashboard" class="w-7 h-7 text-musgo"></i>
+                    </div>
+                    <h4 class="text-lg font-[800] text-musgo-dark mb-4 uppercase tracking-tighter italic">Transparência Total</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed font-semibold">Relacionamento transparente, mantendo condôminos sempre informados e engajados nas decisões.</p>
+                </div>
+
+                <!-- 3. Expertise Financeira -->
+                <div class="group p-10 bg-musgo-light rounded-[3rem] border border-transparent hover:border-musgo/20 hover:bg-white hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 group-hover:bg-musgo group-hover:text-white transition-all text-musgo">
+                        <i data-lucide="trending-down" class="w-7 h-7 text-musgo"></i>
+                    </div>
+                    <h4 class="text-lg font-[800] text-musgo-dark mb-4 uppercase tracking-tighter italic">Expertise Financeira</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed font-semibold">Controle rigoroso das finanças, garantindo equilíbrio e sustentabilidade econômica do prédio.</p>
+                </div>
+
+                <!-- 4. Metodologia -->
+                <div class="group p-10 bg-musgo-light rounded-[3rem] border border-transparent hover:border-musgo/20 hover:bg-white hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 group-hover:bg-musgo group-hover:text-white transition-all text-musgo">
+                        <i data-lucide="zap" class="w-7 h-7 text-musgo"></i>
+                    </div>
+                    <h4 class="text-lg font-[800] text-musgo-dark mb-4 uppercase tracking-tighter italic">Metodologia Própria</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed font-semibold">Abordagem focada em eficiência, transparência e inovação constante na gestão.</p>
+                </div>
+
+                <!-- 5. Sustentabilidade -->
+                <div class="group p-10 bg-musgo-light rounded-[3rem] border border-transparent hover:border-musgo/20 hover:bg-white hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 group-hover:bg-musgo group-hover:text-white transition-all text-musgo">
+                        <i data-lucide="building-2" class="w-7 h-7 text-musgo"></i>
+                    </div>
+                    <h4 class="text-lg font-[800] text-musgo-dark mb-4 uppercase tracking-tighter italic">Foco na Sustentabilidade</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed font-semibold">Práticas sustentáveis que preservam o ambiente e reduzem despesas operacionais.</p>
+                </div>
+
+                <!-- 6. Experiência -->
+                <div class="group p-10 bg-musgo-light rounded-[3rem] border border-transparent hover:border-musgo/20 hover:bg-white hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 group-hover:bg-musgo group-hover:text-white transition-all text-musgo">
+                        <i data-lucide="users" class="w-7 h-7 text-musgo"></i>
+                    </div>
+                    <h4 class="text-lg font-[800] text-musgo-dark mb-4 uppercase tracking-tighter italic">Gestão de Pessoas</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed font-semibold">Anos de experiência mediando conflitos e administrando pessoas com excelência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- QUEM É ELIESER --- -->
+    <section id="quem-e" class="py-32 bg-[#F1F3ED] border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div data-aos="zoom-in" class="relative group order-2 lg:order-1">
+                    <img src="https://dezgestao.com.br/wp-content/uploads/2024/07/elieser-sales3.jpg" alt="Elieser Sales" class="rounded-[4rem] shadow-2xl border-8 border-white w-full">
+                    <div class="absolute -bottom-10 -right-4 lg:-right-10 bg-musgo p-10 rounded-[3rem] shadow-2xl">
+                        <p class="text-[10px] font-black uppercase tracking-[0.4em] mb-2 text-white/70">CEO Dez Gestão</p>
+                        <p class="text-3xl font-[800] italic uppercase tracking-tighter text-white font-serif">Elieser Sales</p>
+                     </div>
+                </div>
+                <div data-aos="fade-left" class="order-1 lg:order-2">
+                    <span class="text-musgo font-[800] uppercase tracking-[0.4em] text-[11px]">SÍNDICO PROFISSIONAL EM SÃO PAULO</span>
+                    <h2 class="text-4xl lg:text-6xl font-[800] text-musgo-dark mt-8 mb-10 leading-tight tracking-tighter italic">Quem é Elieser Sales?</h2>
+                    <div class="space-y-6 text-slate-600 text-lg leading-relaxed font-medium">
+                        <p>Olá! Eu sou Elieser Sales, um síndico profissional com uma paixão pela gestão condominial eficiente e inovadora. Minha trajetória é marcada por uma combinação única de experiências e habilidades:</p>
+                        <ul class="space-y-4 pt-4 text-sm uppercase font-[800] tracking-widest text-musgo-dark">
+                            <li class="flex items-center gap-4"><i data-lucide="check-circle" class="text-musgo"></i> Transparência e Inovação</li>
+                            <li class="flex items-center gap-4"><i data-lucide="check-circle" class="text-musgo"></i> Expertise em Gestão Condominial</li>
+                            <li class="flex items-center gap-4"><i data-lucide="check-circle" class="text-musgo"></i> Empreendedor e Empresário</li>
+                        </ul>
+                        <p class="pt-4 italic text-musgo-dark text-xl font-[400]">Ofereço uma gestão personalizada, pautada na transparência e na busca constante por inovações para otimizar processos e reduzir custos.</p>
+                    </div>
+                    <div class="mt-12">
+                        <a href="https://wa.me/5511982020460" class="bg-musgo-dark text-white px-10 py-5 rounded-2xl font-[800] text-xs uppercase tracking-widest hover:bg-musgo transition-all shadow-xl">
+                            Solicitar Proposta Agora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- DESTAQUES TÉCNICOS --- -->
+    <!-- Metodologia Própria -->
+    <section class="py-32 bg-white overflow-hidden" id="metodo">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
+                <div data-aos="fade-right">
+                    <p class="text-musgo text-[11px] font-[800] uppercase tracking-[0.4em] mb-8">Diferencial Estratégico</p>
+                    <h2 class="text-4xl lg:text-6xl font-[800] text-musgo-dark mb-10 leading-tight tracking-tighter italic">Métodologia Própria.</h2>
+                    <div class="space-y-8 text-slate-500 text-lg font-medium leading-relaxed mb-12 border-l-4 border-musgo pl-8">
+                        <p>Elieser Sales desenvolveu uma metodologia própria que se destaca pela inovação e eficiência na administração condominial. Esta metodologia exclusiva foi criada com base em anos de experiência e conhecimento profundo, visando proporcionar uma gestão de alta qualidade e resultados excepcionais.</p>
+                    </div>
+                    <div class="flex items-center gap-5">
+                        <i data-lucide="zap" class="text-musgo w-12 h-12"></i>
+                        <span class="text-xs font-[800] uppercase tracking-widest text-musgo-dark">Inovação e eficiência radical</span>
+                    </div>
+                </div>
+                <div data-aos="zoom-in" class="flex justify-center">
+                    <img src="https://dezgestao.com.br/wp-content/uploads/2024/07/Metodo-logia-propria.png" alt="Selo Metodologia" class="w-full max-w-sm drop-shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Análise de Contratos -->
+    <section class="py-32 bg-musgo-dark text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
+                <div data-aos="zoom-in" class="order-2 lg:order-1 flex justify-center">
+                    <img src="https://dezgestao.com.br/wp-content/uploads/2024/07/Especialista-em-analise-de-contrato-e-reducao-de-custos2.png" alt="Especialista Contratos" class="w-full max-w-sm drop-shadow-2xl">
+                </div>
+                <div data-aos="fade-left" class="order-1 lg:order-2">
+                    <p class="text-musgo text-[11px] font-[800] uppercase tracking-[0.4em] mb-8">Auditoria de Elite</p>
+                    <h2 class="text-4xl lg:text-6xl font-[800] text-white mb-10 leading-tight tracking-tighter italic">Análise de Contrato e Redução de Custos.</h2>
+                    <div class="space-y-8 text-accent text-lg font-medium leading-relaxed mb-12">
+                        <p>Nossa metodologia envolve uma revisão completa de todos os documentos contratuais, incluindo termos, cláusulas e condições muitas vezes esquecidos. Identificamos possíveis redundâncias, taxas excessivas e oportunidades de renegociação agressiva.</p>
+                    </div>
+                    <div class="bg-musgo/20 p-8 rounded-3xl border border-musgo/30">
+                        <p class="text-sm font-semibold italic text-musgo">"Esta análise criteriosa permite otimizar os gastos do condomínio e assegurar que todos os serviços contratados sejam realmente necessários e vantajosos."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- REALIZAÇÕES (GALERIA 15 FOTOS) --- -->
+    <section id="realizacoes" class="py-32 bg-[#F9FAF7]">
+        <div class="max-w-[1440px] mx-auto px-6">
+            <div class="text-center mb-24" data-aos="fade-up">
+                <span class="text-musgo font-[800] uppercase tracking-[0.4em] text-[11px]">Resultados Tangíveis</span>
+                <h2 class="text-4xl lg:text-6xl font-[800] text-musgo-dark mt-6 tracking-tighter italic">Melhorias e Realizações.</h2>
+            </div>
+
+            <div class="gallery-columns">
+                <div class="gallery-item" data-aos="fade-up"><img src="https://dezgestao.com.br/wp-content/uploads/2024/07/16.jpg" class="rounded-[2rem] shadow-lg w-full"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="50"><img src="https://dezgestao.com.br/wp-content/uploads/2024/07/14.jpg" class="rounded-[2rem] shadow-lg w-full"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100"><img src="https://dezgestao.com.br/wp-content/uploads/2024/07/10.jpg" class="rounded-[2rem] shadow-lg w-full"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="150"><img src="https://dezgestao.com.br/wp-content/uploads/2024/07/3.jpg" class="rounded-[2rem] shadow-lg w-full"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200"><img src="https://dezgestao.com.br/wp-content/uploads/2024/07/6.jpg" class="rounded-[2rem] shadow-lg w-full"></div>
+                <div class="gallery-item" data-aos="fade-up"><img src="https://dezgestao.com.br/wp-content/uploads/2024/07/5.jpg" class="rounded-[2rem] shadow-lg w-full"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="50"><img src="https://dezgestao.com.br/wp-content/uploads/2024/07/13.jpg" class="rounded-[2rem] shadow-lg w-full"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100"><img src="https://dezgestao.com.br/wp-content/uploads/2024/07/8.jpg" class="rounded-[2rem] shadow-lg w-full"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="150"><img src="https://dezgestao.com.br/wp-content/uploads/2024/07/9.jpg" class="rounded-[2rem] shadow-lg w-full"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200"><img src="https://dezgestao.com.br/wp-content/uploads/2024/07/15.jpg" class="rounded-[2rem] shadow-lg w-full"></div>
+                <div class="gallery-item" data-aos="fade-up"><img src="https://dezgestao.com.br/wp-content/uploads/2024/07/4.jpg" class="rounded-[2rem] shadow-lg w-full"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="50"><img src="https://dezgestao.com.br/wp-content/uploads/2024/07/7.jpg" class="rounded-[2rem] shadow-lg w-full"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100"><img src="https://dezgestao.com.br/wp-content/uploads/2024/07/12.jpg" class="rounded-[2rem] shadow-lg w-full"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="150"><img src="https://dezgestao.com.br/wp-content/uploads/2024/07/11.jpg" class="rounded-[2rem] shadow-lg w-full"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200"><img src="https://dezgestao.com.br/wp-content/uploads/2024/07/2.jpg" class="rounded-[2rem] shadow-lg w-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- PORTFÓLIO COMPLETO --- -->
+    <section id="ativos" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+                <div class="max-w-2xl" data-aos="fade-right">
+                    <h2 class="text-4xl lg:text-[4rem] font-[800] text-musgo-dark mb-8 tracking-tighter italic">Portfólio de Ativos.</h2>
+                    <p class="text-accent font-[800] uppercase tracking-[0.3em] text-[11px]">Expertise em Complexos de Alta Complexidade e Multi-uso</p>
+                </div>
+                <div class="flex items-center gap-5 border border-slate-100 p-6 rounded-[2rem] bg-white shadow-sm" data-aos="fade-left">
+                    <img src="https://dezgestao.com.br/wp-content/uploads/2024/07/logotipo_aabic-01-300x169-1.png" class="h-10 grayscale opacity-60" alt="AABIC">
+                    <div class="h-10 w-[1px] bg-slate-100"></div>
+                    <p class="text-[10px] font-black uppercase text-accent tracking-widest text-musgo">Filiado AABIC</p>
+                 </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Ativo 1 -->
+                <div class="group p-10 bg-musgo-light rounded-[3rem] border border-transparent hover:border-musgo/20 hover:bg-white hover:shadow-2xl transition-all duration-500" data-aos="zoom-in">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 group-hover:bg-musgo group-hover:text-white transition-all text-accent shadow-sm">
+                        <i data-lucide="building-2" class="w-7 h-7"></i>
+                    </div>
+                    <div class="text-[10px] font-[800] text-musgo uppercase tracking-[0.3em] mb-4">Residencial Premium</div>
+                    <h5 class="text-2xl font-[800] text-musgo-dark tracking-tighter leading-tight italic">Condomínio Grow Sapopemba</h5>
+                </div>
+
+                <!-- Ativo 2 -->
+                <div class="group p-10 bg-musgo-light rounded-[3rem] border border-transparent hover:border-musgo/20 hover:bg-white hover:shadow-2xl transition-all duration-500" data-aos="zoom-in" data-aos-delay="50">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 group-hover:bg-musgo group-hover:text-white transition-all text-accent shadow-sm">
+                        <i data-lucide="building-2" class="w-7 h-7"></i>
+                    </div>
+                    <div class="text-[10px] font-[800] text-musgo uppercase tracking-[0.3em] mb-4">Corporativo</div>
+                    <h5 class="text-2xl font-[800] text-musgo-dark tracking-tighter leading-tight italic">GranDialogo Comercial</h5>
+                </div>
+
+                <!-- Ativo 3 -->
+                <div class="group p-10 bg-musgo-light rounded-[3rem] border border-transparent hover:border-musgo/20 hover:bg-white hover:shadow-2xl transition-all duration-500" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 group-hover:bg-musgo group-hover:text-white transition-all text-accent shadow-sm">
+                        <i data-lucide="building-2" class="w-7 h-7"></i>
+                    </div>
+                    <div class="text-[10px] font-[800] text-musgo uppercase tracking-[0.3em] mb-4">Retail / Mall</div>
+                    <h5 class="text-2xl font-[800] text-musgo-dark tracking-tighter leading-tight italic">GranDialogo Mall</h5>
+                </div>
+
+                <!-- Ativo 4 -->
+                <div class="group p-10 bg-musgo-light rounded-[3rem] border border-transparent hover:border-musgo/20 hover:bg-white hover:shadow-2xl transition-all duration-500" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 group-hover:bg-musgo group-hover:text-white transition-all text-accent shadow-sm">
+                        <i data-lucide="building-2" class="w-7 h-7"></i>
+                    </div>
+                    <div class="text-[10px] font-[800] text-musgo uppercase tracking-[0.3em] mb-4">Residencial Torres</div>
+                    <h5 class="text-2xl font-[800] text-musgo-dark tracking-tighter leading-tight italic">GranDialogo Residencial 1</h5>
+                </div>
+
+                <!-- Ativo 5 -->
+                <div class="group p-10 bg-musgo-light rounded-[3rem] border border-transparent hover:border-musgo/20 hover:bg-white hover:shadow-2xl transition-all duration-500" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 group-hover:bg-musgo group-hover:text-white transition-all text-accent shadow-sm">
+                        <i data-lucide="building-2" class="w-7 h-7"></i>
+                    </div>
+                    <div class="text-[10px] font-[800] text-musgo uppercase tracking-[0.3em] mb-4">Gestão Integrada</div>
+                    <h5 class="text-2xl font-[800] text-musgo-dark tracking-tighter leading-tight italic">GranDialogo Residencial 2 & 3</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- DEPOIMENTOS (PROVA SOCIAL) --- -->
+    <section id="depoimentos" class="py-32 bg-[#F9FAF7] border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24" data-aos="fade-up">
+                <span class="text-musgo font-[800] uppercase tracking-[0.4em] text-[11px]">Voz dos Moradores</span>
+                <h2 class="text-4xl lg:text-[4.5rem] font-[800] text-musgo-dark mt-8 tracking-tighter italic">Resultados que geram confiança.</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Eduardo -->
+                <div class="bg-white p-10 rounded-[3rem] border border-slate-200 relative group transition-all duration-500 hover:shadow-2xl" data-aos="fade-up">
+                    <i data-lucide="quote" class="absolute top-8 right-10 text-musgo/10 w-12 h-12"></i>
+                    <div class="flex gap-1 mb-8 text-yellow-500"><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i></div>
+                    <p class="text-slate-600 text-sm leading-[1.8] mb-10 italic font-semibold">"Trabalho com muito profissionalismo. Solícito com os moradores e atende solicitações bem rapidamente. Só temos boas impressões e resultados."</p>
+                    <div class="pt-8 border-t border-slate-100">
+                       <p class="font-[800] text-musgo-dark text-[11px] uppercase tracking-widest">Eduardo Fontes</p>
+                       <p class="text-[9px] font-bold text-musgo uppercase tracking-[0.2em] mt-2">Condomínio Vitality</p>
+                    </div>
+                </div>
+
+                <!-- Cristiane -->
+                <div class="bg-white p-10 rounded-[3rem] border border-slate-200 relative group transition-all duration-500 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <i data-lucide="quote" class="absolute top-8 right-10 text-musgo/10 w-12 h-12"></i>
+                    <div class="flex gap-1 mb-8 text-yellow-500"><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i></div>
+                    <p class="text-slate-600 text-sm leading-[1.8] mb-10 italic font-semibold">"Impacto positivo evidente em todos os aspectos. Trouxe uma visão estratégica e profissional para a gestão condominial, algo nunca visto antes."</p>
+                    <div class="pt-8 border-t border-slate-100">
+                       <p class="font-[800] text-musgo-dark text-[11px] uppercase tracking-widest">Cristiane Matsuyama</p>
+                       <p class="text-[9px] font-bold text-musgo uppercase tracking-[0.2em] mt-2">Condomínio Vitality</p>
+                    </div>
+                </div>
+
+                <!-- Everton -->
+                <div class="bg-white p-10 rounded-[3rem] border border-slate-200 relative group transition-all duration-500 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <i data-lucide="quote" class="absolute top-8 right-10 text-musgo/10 w-12 h-12"></i>
+                    <div class="flex gap-1 mb-8 text-yellow-500"><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i></div>
+                    <p class="text-slate-600 text-sm leading-[1.8] mb-10 italic font-semibold">"Profissional transparente, visando sempre o bem estar do condomínio, mas não esquecendo das particularidades de cada indivíduo. NOTA 10."</p>
+                    <div class="pt-8 border-t border-slate-100">
+                       <p class="font-[800] text-musgo-dark text-[11px] uppercase tracking-widest">Everton Pirolla</p>
+                       <p class="text-[9px] font-bold text-musgo uppercase tracking-[0.2em] mt-2">Condomínio Vitality</p>
+                    </div>
+                </div>
+
+                <!-- Anderson -->
+                <div class="bg-white p-10 rounded-[3rem] border border-slate-200 relative group transition-all duration-500 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="300">
+                    <i data-lucide="quote" class="absolute top-8 right-10 text-musgo/10 w-12 h-12"></i>
+                    <div class="flex gap-1 mb-8 text-yellow-500"><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i></div>
+                    <p class="text-slate-600 text-sm leading-[1.8] mb-10 italic font-semibold">"Trouxe muitas melhorias em pouco tempo e transparência absoluta. Os eventos voltaram sem necessidade de rateio. Transmite muita confiança."</p>
+                    <div class="pt-8 border-t border-slate-100">
+                       <p class="font-[800] text-musgo-dark text-[11px] uppercase tracking-widest">Anderson Moreno</p>
+                       <p class="text-[9px] font-bold text-musgo uppercase tracking-[0.2em] mt-2">Condomínio Vitality</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- FOOTER --- -->
+    <footer class="bg-musgo-dark text-white pt-32 pb-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-20 mb-24">
+                <div class="lg:col-span-2">
+                    <img src="https://dezgestao.com.br/wp-content/uploads/2024/07/Logo-Dez-Gestao-Branco.png" class="h-14 mb-10" alt="Logo Branco">
+                    <p class="text-accent text-lg leading-relaxed mb-12 max-w-md font-medium">
+                        Property Management Solutions. Focados na economia real e na valorização patrimonial de luxo em São Paulo.
+                    </p>
+                    <div class="flex gap-6 text-musgo">
+                        <i data-lucide="phone" class="w-6 h-6 hover:text-white cursor-pointer transition-colors"></i>
+                        <i data-lucide="mail" class="w-6 h-6 hover:text-white cursor-pointer transition-colors"></i>
+                     </div>
+                </div>
+                <div>
+                    <h4 class="font-extrabold text-[11px] uppercase tracking-[0.4em] mb-12 text-musgo">Capital Paulista</h4>
+                    <p class="text-xs text-slate-400 font-[800] tracking-[0.25em] uppercase leading-loose">
+                        (11) 98202-0460 <br>
+                        contato@dezgestao.com.br
+                    </p>
+                </div>
+                <div class="flex flex-col items-center lg:items-end">
+                    <h4 class="font-extrabold text-[11px] uppercase tracking-[0.4em] mb-12 text-musgo">Filiação</h4>
+                    <img src="https://dezgestao.com.br/wp-content/uploads/2024/07/logotipo_aabic-01-300x169-1.png" class="h-10 brightness-200 grayscale opacity-40" alt="AABIC">
+                </div>
+            </div>
+            <div class="pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+                <p class="text-[10px] text-slate-500 font-extrabold uppercase tracking-[0.35em]">DEZ GESTÃO © 2024. TODOS OS DIREITOS RESERVADOS.</p>
+                <p class="text-[10px] text-slate-500 font-extrabold uppercase tracking-[0.35em]">DESIGN POR <span class="text-musgo">O CARA DOS SITES</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- --- WHATSAPP FIXO --- -->
+    <a href="https://wa.me/5511982020460" target="_blank" class="fixed bottom-10 right-10 z-50 group flex items-center gap-5">
+        <div class="bg-white px-10 py-5 rounded-[2rem] shadow-2xl border border-slate-100 hidden md:block opacity-0 translate-x-12 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700 pointer-events-none">
+           <p class="text-musgo-dark text-[11px] font-[800] uppercase tracking-[0.3em]">Consultoria Online</p>
+        </div>
+        <div class="w-16 h-16 bg-[#25D366] text-white rounded-[1.8rem] flex items-center justify-center shadow-2xl relative shadow-emerald-500/40">
+            <div class="absolute inset-0 bg-[#25D366] rounded-[1.8rem] animate-ping opacity-20"></div>
+            <i data-lucide="message-square" class="w-8 h-8 stroke-[2.5]"></i>
+        </div>
+    </a>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            duration: 1000
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-glass', 'py-4', 'shadow-sm');
+                nav.classList.remove('py-8');
+            } else {
+                nav.classList.remove('bg-glass', 'py-4', 'shadow-sm');
+                nav.classList.add('py-8');
+            }
+        });
+    </script>
+</body>
+</html>
